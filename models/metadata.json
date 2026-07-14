@@ -1,0 +1,136 @@
+{
+  "trained_at": "2026-07-14T16:42:52+07:00",
+  "algorithm": "Prophet",
+  "prophet_version": "1.3.0",
+  "python_version": "3.12.10",
+  "configuration": {
+    "growth": "linear",
+    "weekly_seasonality": true,
+    "yearly_seasonality": true,
+    "daily_seasonality": false,
+    "seasonality_mode": "additive",
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 10.0,
+    "interval_width": 0.95
+  },
+  "country_holidays": "ID",
+  "test_horizon_days": 60,
+  "models": {
+    "POLIKLINIK ANAK": {
+      "file": "prophet_poliklinik_anak.pkl",
+      "data_start": "2024-04-01",
+      "data_end": "2026-04-30",
+      "observations": 596,
+      "total_visits": 16591,
+      "evaluation_cutoff": "2026-03-01",
+      "validation_mae": 5.108484378266661,
+      "selected_configuration": {
+        "growth": "linear",
+        "weekly_seasonality": true,
+        "yearly_seasonality": true,
+        "daily_seasonality": false,
+        "seasonality_mode": "multiplicative",
+        "changepoint_prior_scale": 0.05,
+        "seasonality_prior_scale": 10.0,
+        "interval_width": 0.95
+      },
+      "metrics": {
+        "mae": 6.2203273352831365,
+        "rmse": 7.546549742441326,
+        "wape": 26.797010518634963,
+        "smape": 28.383434888251212,
+        "bias": -1.5909968039191595
+      },
+      "best_baseline": "Moving Average 28",
+      "best_baseline_mae": 6.224164133738601,
+      "prophet_beats_baseline": true
+    },
+    "POLIKLINIK MATA": {
+      "file": "prophet_poliklinik_mata.pkl",
+      "data_start": "2024-04-01",
+      "data_end": "2026-04-30",
+      "observations": 568,
+      "total_visits": 13893,
+      "evaluation_cutoff": "2026-03-01",
+      "validation_mae": 5.409354166558526,
+      "selected_configuration": {
+        "growth": "linear",
+        "weekly_seasonality": true,
+        "yearly_seasonality": true,
+        "daily_seasonality": false,
+        "seasonality_mode": "multiplicative",
+        "changepoint_prior_scale": 0.05,
+        "seasonality_prior_scale": 10.0,
+        "interval_width": 0.95
+      },
+      "metrics": {
+        "mae": 9.081294248456624,
+        "rmse": 10.830275382765176,
+        "wape": 39.97507516067031,
+        "smape": 47.65203368097495,
+        "bias": -5.683890590210299
+      },
+      "best_baseline": "Moving Average 28",
+      "best_baseline_mae": 6.222049689440995,
+      "prophet_beats_baseline": false
+    },
+    "POLIKLINIK OBGYN": {
+      "file": "prophet_poliklinik_obgyn.pkl",
+      "data_start": "2024-04-01",
+      "data_end": "2026-04-30",
+      "observations": 712,
+      "total_visits": 28064,
+      "evaluation_cutoff": "2026-03-01",
+      "validation_mae": 9.33546287237896,
+      "selected_configuration": {
+        "growth": "linear",
+        "weekly_seasonality": true,
+        "yearly_seasonality": true,
+        "daily_seasonality": false,
+        "seasonality_mode": "additive",
+        "changepoint_prior_scale": 0.01,
+        "seasonality_prior_scale": 10.0,
+        "interval_width": 0.95
+      },
+      "metrics": {
+        "mae": 8.29979480456013,
+        "rmse": 10.42659933428547,
+        "wape": 23.536731535319774,
+        "smape": 46.15400727583211,
+        "bias": -3.9494508661365875
+      },
+      "best_baseline": "Seasonal Naive 7",
+      "best_baseline_mae": 7.684210526315789,
+      "prophet_beats_baseline": false
+    },
+    "POLIKLINIK PENYAKIT DALAM": {
+      "file": "prophet_poliklinik_penyakit_dalam.pkl",
+      "data_start": "2024-04-01",
+      "data_end": "2026-04-30",
+      "observations": 597,
+      "total_visits": 38701,
+      "evaluation_cutoff": "2026-03-01",
+      "validation_mae": 16.679509249594865,
+      "selected_configuration": {
+        "growth": "linear",
+        "weekly_seasonality": true,
+        "yearly_seasonality": true,
+        "daily_seasonality": false,
+        "seasonality_mode": "additive",
+        "changepoint_prior_scale": 0.01,
+        "seasonality_prior_scale": 10.0,
+        "interval_width": 0.95
+      },
+      "metrics": {
+        "mae": 16.806799256838666,
+        "rmse": 21.219018970661022,
+        "wape": 24.090258160153013,
+        "smape": 26.308179408054027,
+        "bias": -10.426545586901316
+      },
+      "best_baseline": "Moving Average 28",
+      "best_baseline_mae": 16.83434650455927,
+      "prophet_beats_baseline": true
+    }
+  }
+}
