@@ -15,6 +15,7 @@ POLI_COLUMN = "poliklinik"
 MAX_FORECAST_DAYS = 365
 TEST_HORIZON_DAYS = 60
 APP_TIMEZONE = "Asia/Jakarta"
+RANDOM_SEED = 42
 
 PROPHET_CONFIG = {
     "growth": "linear",

@@ -1,5 +1,5 @@
 {
-  "trained_at": "2026-07-14T16:42:52+07:00",
+  "trained_at": "2026-07-14T17:23:15+07:00",
   "algorithm": "Prophet",
   "prophet_version": "1.3.0",
   "python_version": "3.12.10",
@@ -15,6 +15,7 @@
   },
   "country_holidays": "ID",
   "test_horizon_days": 60,
+  "random_seed": 42,
   "models": {
     "POLIKLINIK ANAK": {
       "file": "prophet_poliklinik_anak.pkl",
@@ -22,7 +23,7 @@
       "data_end": "2026-04-30",
       "observations": 596,
       "total_visits": 16591,
-      "evaluation_cutoff": "2026-03-01",
+      "evaluation_cutoff": "2026-02-28",
       "validation_mae": 5.108484378266661,
       "selected_configuration": {
         "growth": "linear",
@@ -51,7 +52,7 @@
       "data_end": "2026-04-30",
       "observations": 568,
       "total_visits": 13893,
-      "evaluation_cutoff": "2026-03-01",
+      "evaluation_cutoff": "2026-02-28",
       "validation_mae": 5.409354166558526,
       "selected_configuration": {
         "growth": "linear",
@@ -109,7 +110,7 @@
       "data_end": "2026-04-30",
       "observations": 597,
       "total_visits": 38701,
-      "evaluation_cutoff": "2026-03-01",
+      "evaluation_cutoff": "2026-02-28",
       "validation_mae": 16.679509249594865,
       "selected_configuration": {
         "growth": "linear",

@@ -494,7 +494,7 @@ Sistem harus memberikan pesan kesalahan yang jelas jika:
 
 ### NFR-06 Maintainability
 
-Proses preprocessing, training, forecasting, dan UI harus dipisahkan ke dalam modul.
+Proses preprocessing, training, validation, testing, dan evaluasi disusun sebagai tahapan CRISP-DM di dalam satu notebook. Lapisan inferensi forecasting dan UI tetap dipisahkan dari notebook agar aplikasi tidak melakukan training saat digunakan.
 
 ### NFR-07 Reproducibility
 
@@ -523,10 +523,9 @@ Konfigurasi model, periode training, evaluasi, dan versi library harus terdokume
 ```text
 forecast_rawat_jalan/
 ├── app.py
-├── preprocessing.py
-├── train_models.py
+├── notebooks/
+│   └── 01_crisp_dm_forecasting.ipynb
 ├── forecasting.py
-├── evaluation.py
 ├── config.py
 ├── requirements.txt
 ├── README.md
@@ -876,3 +875,11 @@ Sistem dibangun menggunakan Streamlit sebagai antarmuka sekaligus lapisan aplika
 Pengguna dapat memilih poliklinik, tanggal awal, tanggal akhir, dan bentuk penyajian hasil. Sistem memuat model yang sudah dilatih, menghasilkan prediksi sampai tanggal akhir, mengambil hasil sesuai periode yang dipilih, kemudian menampilkannya dalam bentuk ringkasan, grafik, tabel, dan file CSV.
 
 Prediksi mingguan dan bulanan diperoleh dari agregasi prediksi harian. Model tidak dilatih ulang setiap kali forecasting dijalankan. Training ulang dilakukan secara berkala ketika tersedia data kunjungan aktual terbaru.
+
+---
+
+## 24. Addendum Alur Retraining
+
+Implementasi akhir menggunakan `notebooks/01_crisp_dm_forecasting.ipynb` sebagai satu-satunya alur preprocessing, training, validation, testing, evaluasi baseline, dan retraining model dengan framework CRISP-DM.
+
+Aplikasi Streamlit hanya memuat artefak hasil notebook. Retraining tidak dijalankan dari file Python terpisah dan tidak dilakukan dari antarmuka aplikasi.

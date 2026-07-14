@@ -57,6 +57,7 @@ with left:
             {"parameter": "hari_libur", "nilai": metadata["country_holidays"]},
             {"parameter": "prophet_version", "nilai": metadata["prophet_version"]},
             {"parameter": "python_version", "nilai": metadata["python_version"]},
+            {"parameter": "random_seed", "nilai": str(metadata.get("random_seed", "-"))},
         ]
     )
     st.dataframe(pd.DataFrame(config_rows), width="stretch", hide_index=True)
@@ -83,7 +84,7 @@ st.markdown(
 - Tanggal tanpa sumber data tidak otomatis dianggap sebagai nol kunjungan.
 - Perubahan jadwal layanan, kapasitas dokter, atau kebijakan rumah sakit belum menjadi regressor model.
 - Hasil ditujukan untuk perencanaan operasional, bukan keputusan atau rekomendasi medis.
-- Model perlu dilatih ulang setiap bulan atau setelah data aktual baru tersedia.
+- Retraining dilakukan hanya melalui `notebooks/01_crisp_dm_forecasting.ipynb` setiap bulan atau setelah data aktual baru tersedia.
     """
 )
 st.caption(f"Waktu training: {trained_at.strftime('%d %b %Y %H:%M %Z')} · Horizon pengujian: {metadata['test_horizon_days']} hari")

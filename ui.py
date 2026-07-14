@@ -67,7 +67,10 @@ def page_header(title: str, context: str) -> None:
 
 def _require_file(path: Path, label: str) -> None:
     if not path.exists():
-        st.error(f"{label} belum tersedia. Jalankan `python preprocessing.py` lalu `python train_models.py`.")
+        st.error(
+            f"{label} belum tersedia. Jalankan seluruh cell pada "
+            "`notebooks/01_crisp_dm_forecasting.ipynb`."
+        )
         st.stop()
 
 
